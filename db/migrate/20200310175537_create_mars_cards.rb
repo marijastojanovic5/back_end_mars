@@ -4,6 +4,8 @@ class CreateMarsCards < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :name
       t.string :status
+      t.string :launch_date
+      t.string :landing_date
 
       t.timestamps
     end

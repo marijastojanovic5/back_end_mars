@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_03_10_180004) do
     t.string "image"
     t.string "name"
     t.string "status"
+    t.string "launch_date"
+    t.string "landing_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
