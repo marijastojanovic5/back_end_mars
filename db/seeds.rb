@@ -2,6 +2,7 @@ require 'byebug'
 require 'rest-client'
 require 'json'
 MarsCard.destroy_all
+User.destroy_all
 
 
 
@@ -26,6 +27,8 @@ mars_details.each do |mars_camera|
 
     MarsCard.create(image: mars_camera_image,name: mars_camera_full_name,status: mars_camera_status,launch_date: mars_camera_launch_date, landing_date: mars_camera_landing_date)
 end
+
+User.create(name: "Marija", username: "Kai")
 
    
 

@@ -11,6 +11,7 @@ class MarsCardsController < ApplicationController
         render json: mars_card.to_json(
         {:except => [:created_at, :updated_at]})   
     end
-   
+
+    
 
 end
