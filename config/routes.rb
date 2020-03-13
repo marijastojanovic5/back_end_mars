@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, only: [:index, :show]
+  post '/login', to: 'users#login_create'
   resources :comments
   resources :favorites
   resources :mars_cards

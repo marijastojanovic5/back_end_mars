@@ -4,12 +4,6 @@ require 'json'
 MarsCard.destroy_all
 User.destroy_all
 
-
-
-
-
-
-
 nasa_key = Rails.application.credentials[:api_key]
 response_nasa = RestClient.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?&sol=1000&api_key=#{nasa_key}")
 response_hash = JSON.parse(response_nasa)
@@ -36,5 +30,6 @@ User.create(name: "Marija", username: "Kai")
 
 
 # byebug
-0
+# 0
+
 
