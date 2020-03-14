@@ -8,7 +8,6 @@ class UsersController < ApplicationController
         
     end
     def login_create
-       
         user = User.find_by(username: params[:username])
         render json: user
       
