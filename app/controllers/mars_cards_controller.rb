@@ -11,7 +11,7 @@ class MarsCardsController < ApplicationController
         mars_card=MarsCard.find(params[:id])
         render json: mars_card.to_json(
             :include=>{:comments=>
-        {:except => [:created_at, :updated_at]}})   
+            {:include =>:user}})   
     end
     def favorites
         byebug
