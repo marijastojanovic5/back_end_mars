@@ -3,7 +3,7 @@ class MarsCardsController < ApplicationController
     def index
         all_mars_cards=MarsCard.all
         render json: all_mars_cards.to_json(
-            :include=>{:users=>
+             :include=>{:users=>
         {:except => [:created_at, :updated_at]}})
 
     end
@@ -13,6 +13,13 @@ class MarsCardsController < ApplicationController
             :include=>{:comments=>
         {:except => [:created_at, :updated_at]}})   
     end
+    def favorites
+        byebug
+         favorite = Favorite.find_or_create_by(user_id: params[:user_id], mars_card_id: params[:mars_card_id])
+         render json: favorite
+    end
+
+
 
     
 

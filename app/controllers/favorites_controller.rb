@@ -1,10 +1,7 @@
 class FavoritesController < ApplicationController
     def create
-        favorite = Favorite.create(favorite_params)
-        render json: favorite
-    end
-    private
-    def favorite_params
-        params.require(:favorite).permit(:user_id, :mars_card_id)
+       
+         favorite = Favorite.find_or_create_by(user_id: params[:user_id], mars_card_id: params[:mars_card_id])
+         render json: favorite
     end
 end
