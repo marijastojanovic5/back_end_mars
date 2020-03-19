@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   post '/login', to: 'users#login_create'
-  resources :comments
+  resources :comments,only: [:create]
   resources :favorites, only: [:create]
   delete '/favorites/:user_id/:mars_card_id', to: "favorites#destroy"
   resources :mars_cards,only: [:index, :show]
-  get '/cameras',to: "mars_cards#get_cameras"
+  
+  
   
 
 

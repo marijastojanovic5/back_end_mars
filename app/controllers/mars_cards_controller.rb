@@ -13,11 +13,10 @@ class MarsCardsController < ApplicationController
             :include=>{:comments=>
             {:include =>:user}})   
     end
-
-    def get_cameras
+    
         
-        render json: MarsCard.names
-    end
+
+    
     
 
 
