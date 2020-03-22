@@ -6,12 +6,8 @@ def create
 
 end
 def destroy
-    
-    user_id=params[:user_id]
-    mars_card_id=params[:mars_card_id]
-    comment=params[:comment]
-    comment1 = Comment.find_by(:user_id=>user_id, :mars_card_id=>mars_card_id,:comment=> comment)
-    comment1.destroy
+    comment =Comment.find(params[:id])
+    comment.destroy
 
 
     
