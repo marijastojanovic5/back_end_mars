@@ -8,8 +8,15 @@ class UsersController < ApplicationController
     end
 
     def create
-        user= User.create!(name: params["name"],username: params["username"])
-        render json:  { user: user, favorites: user.mars_cards }
+        user= User.create(name: params["name"],username: params["username"])
+        if user.valid? 
+            render json:  { user: user, favorites: user.mars_cards }
+        else     
+            render json: {
+               message:   user.errors.full_messages
+            }
+        end
+
     end
     def login_create
        
