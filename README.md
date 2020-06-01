@@ -8,12 +8,12 @@ You will need to  clone frontend application repo in order to explore the app.
 
 Run bundle install to make sure everything is up to date. This app runs on Postgresql.</br>
 
-run db:create</br>
-run db:migrate</br>
+run <b>db:create</b></br>
+run <b>db:migrate</b></br>
 
 To start app on your local server:</br>
 
-run rails s -p 4000 (open up http://localhost:4000 in your browser)</br>
+run <b>rails s -p 4000</b> (open up http://localhost:4000 in your browser)</br>
 
 <h4>Frameworks and Libraries used</h4>
 
